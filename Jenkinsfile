@@ -20,6 +20,12 @@ pipeline {
                 echo 'build complete'
             }
         }
+        stage ('test') {
+            steps {
+                sh "mvn clean verify sonar:sonar   -Dsonar.projectKey=tracker   -Dsonar.host.url=http://localhost:9000   -Dsonar.login=e794c72e1ab136a7c0f603ff6746b807eecece9c"
+
+            }
+        }
 
         stage ("image build") {
             steps {
