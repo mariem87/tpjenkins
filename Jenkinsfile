@@ -38,9 +38,9 @@ stage ("image build") {
             steps {
                 echo 'building docker image'
                 //sh "docker build -t veteron90/tracker:${commit_id} ." 
-                sh " docker build -t  192.168.222.157:8082/repository/mariemreponexus:${commit_id} ."
+                sh " docker build -t  192.168.222.158:8082/repository/mariemreponexus:${commit_id} ."
                 //sh "docker push veteron90/tracker:${commit_id} "
-                sh " docker push  192.168.222.157:8082/repository/mariemreponexus:${commit_id} "
+                sh " docker push  192.168.222.158:8082/repository/mariemreponexus:${commit_id} "
                 echo 'docker image built'
             }
         }
